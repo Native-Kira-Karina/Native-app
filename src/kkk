@@ -1,0 +1,4 @@
+<Button
+    android:layout_height="wrap_content"
+    android:text=STOP
+    android:background="#ff0000" />
