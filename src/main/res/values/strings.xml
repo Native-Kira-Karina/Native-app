@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="native">Native</string>
+    <string name="enter">Войти</string>
+    <string name="regist">Зарегестрироваться</string>
+    <string name="famy">Famy</string>
+    <string name="grany">Grany</string>
+    <string name="reg">Вы можете зарегистрироваться как</string>
 </resources>
