@@ -8,17 +8,22 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="416dp"
+        android:layout_height="57dp"
+        android:contentDescription="@string/fon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/loading"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="569dp" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="675dp" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="190dp"
         android:layout_height="259dp"
+        android:contentDescription="@string/pic"
         app:srcCompat="@drawable/logo"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="110dp"
         tools:layout_editor_absoluteY="163dp" />
 
@@ -26,8 +31,9 @@
         android:id="@+id/Native"
         android:layout_width="100dp"
         android:layout_height="61dp"
-        android:text="Native"
+        android:text="@string/nat"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="155dp"
         tools:layout_editor_absoluteY="383dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

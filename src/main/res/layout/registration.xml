@@ -9,7 +9,9 @@
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/fon"
         app:srcCompat="@drawable/registration"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
 
@@ -17,7 +19,9 @@
         android:id="@+id/imageButton5"
         android:layout_width="32dp"
         android:layout_height="19dp"
+        android:contentDescription="@string/nasad"
         app:srcCompat="@drawable/arrow"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="40dp"
         tools:layout_editor_absoluteY="47dp" />
 
@@ -25,7 +29,9 @@
         android:id="@+id/imageButton10"
         android:layout_width="114dp"
         android:layout_height="110dp"
+        android:contentDescription="@string/famy"
         app:srcCompat="@drawable/famy"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="247dp"
         tools:layout_editor_absoluteY="221dp" />
 
@@ -33,7 +39,9 @@
         android:id="@+id/imageButton8"
         android:layout_width="114dp"
         android:layout_height="110dp"
+        android:contentDescription="@string/grany"
         app:srcCompat="@drawable/grany"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="72dp"
         tools:layout_editor_absoluteY="221dp" />
 
@@ -46,7 +54,8 @@
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="97dp" />
+        tools:layout_editor_absoluteX="97dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView2"
@@ -56,7 +65,8 @@
         android:textColor="#302723"
         android:textSize="26sp"
         tools:layout_editor_absoluteX="273dp"
-        tools:layout_editor_absoluteY="347dp" />
+        tools:layout_editor_absoluteY="347dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView3"
@@ -68,6 +78,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.68"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="148dp" />
+        tools:layout_editor_absoluteY="148dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
