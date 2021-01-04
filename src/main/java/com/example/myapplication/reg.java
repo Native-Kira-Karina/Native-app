@@ -1,11 +1,10 @@
 package com.example.myapplication;
 
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class registration extends AppCompatActivity {
+public class reg extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
