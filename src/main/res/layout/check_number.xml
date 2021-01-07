@@ -10,12 +10,14 @@
         android:id="@+id/fon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/fon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/check_number"
-        android:contentDescription="@string/fon"/>
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/check_number" />
 
     <ImageButton
         android:id="@+id/arrow"
@@ -28,4 +30,94 @@
         app:layout_constraintTop_toTopOf="parent"
         android:contentDescription="@string/nasad"
         app:srcCompat="@drawable/arrow" />
+
+    <Button
+        android:id="@+id/next"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="105dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="64dp"
+        android:text="@string/next"
+        android:textColor="@color/text"
+        android:textSize="16sp"
+        app:backgroundTint="#C4C4C4"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:layout_width="324dp"
+        android:layout_height="231dp"
+        android:layout_marginTop="160dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/check"
+            android:textColor="@color/text"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/nul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nul" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:autoLink="phone"
+            android:autofillHints=""
+            android:background="@drawable/btn2"
+            android:ems="10"
+            android:inputType="phone"
+            android:text="@string/number"
+            android:textColor="@color/dop_text" />
+
+        <TextView
+            android:id="@+id/nul2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nul" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/sent_cod"
+                android:textColor="@color/text"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/cod"
+                android:layout_width="78dp"
+                android:layout_height="41dp"
+                android:layout_weight="1"
+                android:background="@drawable/btnlittle"
+                android:ems="10"
+                android:fontFamily="serif-monospace"
+                android:inputType="numberDecimal"
+                android:text="@string/cod"
+                android:textColor="@color/dop_text"
+                android:typeface="normal"
+                android:importantForAutofill="no" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

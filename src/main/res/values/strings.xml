@@ -9,4 +9,10 @@
     <string name="pic">Картинка</string>
     <string name="nasad">Вернуться назад</string>
     <string name="nat">Native</string>
+    <string name="next">Далее</string>
+    <string name="check">Подтвердите номер телефона</string>
+    <string name="number">Номер телефона</string>
+    <string name="sent_cod">Прилать код в смс</string>
+    <string name="cod">.    К  О  Д</string>
+    <string name="nul"> </string>
 </resources>
