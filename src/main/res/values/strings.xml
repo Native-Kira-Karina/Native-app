@@ -18,4 +18,12 @@
     <string name="check_number">Ваш номер подтвержден</string>
     <string name="create">Придумайте пароль:</string>
     <string name="pass2">Повторите пароль:</string>
+    <string name="ank_title">Заполните анкету о себе</string>
+    <string name="name">Имя</string>
+    <string name="surname">Фамилия</string>
+    <string name="age">Возраст</string>
+    <string name="email">Email</string>
+    <string name="infa">Немного о себе</string>
+    <string name="add">Добавить фото</string>
+    <string name="problem">Что у Вас вызывает трудности?</string>
 </resources>
