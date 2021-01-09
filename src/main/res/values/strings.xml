@@ -13,6 +13,9 @@
     <string name="check">Подтвердите номер телефона</string>
     <string name="number">Номер телефона</string>
     <string name="sent_cod">Прилать код в смс</string>
-    <string name="cod">.    К  О  Д</string>
+    <string name="cod">Код</string>
     <string name="nul"> </string>
+    <string name="check_number">Ваш номер подтвержден</string>
+    <string name="create">Придумайте пароль:</string>
+    <string name="pass2">Повторите пароль:</string>
 </resources>
