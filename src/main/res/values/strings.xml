@@ -26,4 +26,7 @@
     <string name="infa">Немного о себе</string>
     <string name="add">Добавить фото</string>
     <string name="problem">Что у Вас вызывает трудности?</string>
+    <string name="enter2">Вход в аккаунт</string>
+    <string name="password">Введите пароль</string>
+    <string name="forgot">Забыли пароль?</string>
 </resources>
