@@ -29,4 +29,7 @@
     <string name="enter2">Вход в аккаунт</string>
     <string name="password">Введите пароль</string>
     <string name="forgot">Забыли пароль?</string>
+    <string name="recovery">Восстановление пароля</string>
+    <string name="entnum">Введите номер телефона</string>
+    <string name="list">список возможностей</string>
 </resources>
