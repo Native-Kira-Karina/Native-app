@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="text">#302723</color>
     <color name="dop_text">#A1A1A1</color>
+    <color name="main">#F48888</color>
+    <color name="dop">#00E69E9E</color>
 </resources>

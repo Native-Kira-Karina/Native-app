@@ -8,15 +8,14 @@
 
     <ImageView
         android:id="@+id/fon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="423dp"
+        android:layout_height="797dp"
         android:contentDescription="@string/fon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/first" />
 
     <ImageView
@@ -29,7 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.272"
-        app:srcCompat="@drawable/logo1" />
+        app:srcCompat="@drawable/logotip" />
 
     <Button
         android:id="@+id/recovery"

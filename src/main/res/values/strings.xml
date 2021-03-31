@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Native</string>
     <string name="enter">Войти</string>
     <string name="regist">Зарегестрироваться</string>
-    <string name="famy">Famy</string>
-    <string name="grany">Grany</string>
+    <string name="famy">FAMY</string>
+    <string name="grany">GRANY</string>
     <string name="reg">Вы можете зарегистрироваться как</string>
     <string name="fon">Это фоновое изображение</string>
     <string name="pic">Картинка</string>
