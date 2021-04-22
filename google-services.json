@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "986355791109",
+    "project_id": "native-kira",
+    "storage_bucket": "native-kira.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986355791109:android:8d27a8967318db6fb5736c",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986355791109-3nf9iakpam77c47hffdat3o8e7o5gqvu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "3a39dd829f245a68efaababd2026331e3a82420a"
+          }
+        },
+        {
+          "client_id": "986355791109-7nkketkije2kel0rcmsph8fk7tm2mrpr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIeijv9xKnfXC6hBBFKLK3y-266ULPb9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986355791109-7nkketkije2kel0rcmsph8fk7tm2mrpr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
