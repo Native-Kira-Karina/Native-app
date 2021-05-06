@@ -16,11 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".first" />
-        <activity android:name=".enter" />
-        <activity android:name=".reg" />
-        <activity android:name=".ank_f" />
-        <activity android:name=".ank_g" />
+        <activity android:name=".First" />
+        <activity android:name=".Enter" />
+        <activity android:name=".Reg" />
+        <activity android:name=".AnkFamy" />
+        <activity android:name=".AnkGrany" />
     </application>
 
 </manifest>

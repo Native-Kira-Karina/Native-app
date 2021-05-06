@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class enter extends AppCompatActivity {
+public class Enter extends AppCompatActivity {
     ImageButton arrow;
 
     @Override
@@ -19,7 +19,7 @@ public class enter extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i;
-                i = new Intent(enter.this, first.class);
+                i = new Intent(Enter.this, First.class);
                 startActivity(i);
             }
         };

@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class first extends AppCompatActivity {
+public class First extends AppCompatActivity {
     Button recovery, registration;
 
     @Override
@@ -20,7 +20,7 @@ public class first extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i;
-                i = new Intent(first.this, enter.class);
+                i = new Intent(First.this, Enter.class);
                 startActivity(i);
             }
         };
@@ -28,7 +28,7 @@ public class first extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i;
-                i = new Intent(first.this, reg.class);
+                i = new Intent(First.this, Reg.class);
                 startActivity(i);
             }
         };

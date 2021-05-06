@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class reg extends AppCompatActivity {
+public class Reg extends AppCompatActivity {
     ImageButton arrow, famy, grany;
 
     @Override
@@ -21,7 +21,7 @@ public class reg extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i;
-                i = new Intent(reg.this, first.class);
+                i = new Intent(Reg.this, First.class);
                 startActivity(i);
             }
         };
@@ -29,7 +29,7 @@ public class reg extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i;
-                i = new Intent(reg.this, ank_f.class);
+                i = new Intent(Reg.this, AnkFamy.class);
                 startActivity(i);
             }
         };
@@ -37,7 +37,7 @@ public class reg extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i;
-                i = new Intent(reg.this, ank_g.class);
+                i = new Intent(Reg.this, AnkGrany.class);
                 startActivity(i);
             }
         };

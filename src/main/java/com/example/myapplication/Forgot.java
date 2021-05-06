@@ -3,11 +3,11 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class password extends AppCompatActivity {
+public class Forgot extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.password);
+        setContentView(R.layout.forgot);
     }
 }
