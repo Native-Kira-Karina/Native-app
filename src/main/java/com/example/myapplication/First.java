@@ -64,8 +64,19 @@ public class First extends AppCompatActivity {
         }
     }
 
+
     public void onClickSignIn() {
-
-
+        if(!TextUtils.isEmpty(edit_log.getText().toString()) && !TextUtils.isEmpty(edit_pas.getText().toString())) {
+            mAuth.signInWithEmailAndPassword(edit_log.getText().toString(), edit_pas.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful()){
+                        Toast.makeText(First.this, "Пользователь успешно вошёл", Toast.LENGTH_SHORT).show();
+                    }else {
+                        Toast.makeText(First.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
     }
 }
