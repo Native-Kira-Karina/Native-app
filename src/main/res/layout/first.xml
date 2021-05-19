@@ -20,20 +20,107 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="139dp"
-        android:layout_height="159dp"
+        android:layout_width="75dp"
+        android:layout_height="78dp"
         android:contentDescription="@string/pic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.272"
+        app:layout_constraintVertical_bias="0.024"
         app:srcCompat="@drawable/logotip" />
+
+
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:text="@string/email"
+        android:textColor="@color/text"
+        android:textSize="22sp"
+        app:layout_constraintBaseline_toBaselineOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/email_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="208dp"
+        android:contentDescription="@string/pic"
+        app:layout_constraintBaseline_toBaselineOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/btn2" />
+
+    <EditText
+        android:id="@+id/edit_log"
+        android:layout_width="313dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="208dp"
+        android:contentDescription="@string/create"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBaseline_toBaselineOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/repeat"
+        android:layout_width="276dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="316dp"
+        android:text="@string/create"
+        android:textColor="@color/text"
+        android:textSize="22sp"
+        app:layout_constraintBaseline_toBaselineOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/password_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="380dp"
+        android:contentDescription="@string/pic"
+        app:layout_constraintBaseline_toBaselineOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/btn2" />
+
+    <EditText
+        android:id="@+id/edit_pas"
+        android:layout_width="313dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="380dp"
+        android:contentDescription="@string/pass2"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintBaseline_toBaselineOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/recovery"
         android:layout_width="320dp"
         android:layout_height="40dp"
+        android:clickable="false"
+        android:onClick="onClickSignIn"
         android:text="@string/enter"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/text"
@@ -54,7 +141,7 @@
         android:id="@+id/registration"
         android:layout_width="320dp"
         android:layout_height="40dp"
-        android:background="#000000"
+        android:onClick="onClickReg"
         android:text="@string/regist"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/text"

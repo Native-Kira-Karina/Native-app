@@ -32,7 +32,7 @@
         app:srcCompat="@drawable/arrow" />
 
     <Button
-        android:id="@+id/next"
+        android:id="@+id/SignUp"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="105dp"
         android:layout_height="50dp"
@@ -78,15 +78,16 @@
         android:id="@+id/name_str"
         android:layout_width="290dp"
         android:layout_height="40dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="160dp"
         android:contentDescription="@string/name"
         android:ems="10"
         android:inputType="text"
         android:text="@string/name"
         android:textColor="@color/text"
+        android:textSize="22sp"
         app:layout_constraintBaseline_toBaselineOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.867"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -110,6 +111,7 @@
         android:layout_marginTop="212dp"
         android:contentDescription="@string/surname"
         android:ems="10"
+        android:textSize="22sp"
         android:inputType="text"
         android:text="@string/surname"
         android:textColor="@color/text"
@@ -146,7 +148,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="22sp"/>
 
     <ImageView
         android:id="@+id/email"
@@ -175,7 +178,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="22sp"/>
 
     <ImageView
         android:id="@+id/infa"
@@ -204,7 +208,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="22sp"/>
 
     <ImageButton
         android:id="@+id/add_photo"

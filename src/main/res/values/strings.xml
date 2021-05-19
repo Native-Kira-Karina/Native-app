@@ -10,7 +10,7 @@
     <string name="nasad">Вернуться назад</string>
     <string name="nat">Native</string>
     <string name="next">Далее</string>
-    <string name="check">Подтвердите номер телефона</string>
+    <string name="check">Введите и подтвердите номер телефона</string>
     <string name="number">Номер телефона</string>
     <string name="sent_cod">Прилать код в смс</string>
     <string name="cod">Код</string>
@@ -22,7 +22,7 @@
     <string name="name">Имя</string>
     <string name="surname">Фамилия</string>
     <string name="age">Возраст</string>
-    <string name="email">Email</string>
+    <string name="email">Введите Email:</string>
     <string name="infa">Немного о себе</string>
     <string name="add">Добавить фото</string>
     <string name="problem">Что у Вас вызывает трудности?</string>

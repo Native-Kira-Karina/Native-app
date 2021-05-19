@@ -17,10 +17,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".First" />
-        <activity android:name=".Enter" />
-        <activity android:name=".Reg" />
-        <activity android:name=".AnkFamy" />
-        <activity android:name=".AnkGrany" />
     </application>
 
 </manifest>

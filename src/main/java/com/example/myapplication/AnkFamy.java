@@ -16,7 +16,7 @@ public class AnkFamy extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.anketa_famy);
         arrow = (ImageButton) findViewById(R.id.arrow);
-        next = (Button) findViewById(R.id.next);
+        next = (Button) findViewById(R.id.SignUp);
         View.OnClickListener clickarrow = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
