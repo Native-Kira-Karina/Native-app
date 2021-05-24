@@ -9,7 +9,6 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Password extends AppCompatActivity {
     private EditText edit_log, edit_pas;
-    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

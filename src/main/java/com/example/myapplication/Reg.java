@@ -1,14 +1,15 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class Reg extends AppCompatActivity {
     ImageButton arrow, famy, grany;
+    String email, password, status;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,10 @@ public class Reg extends AppCompatActivity {
         arrow = (ImageButton) findViewById(R.id.arrow);
         famy = (ImageButton) findViewById(R.id.famy);
         grany = (ImageButton) findViewById(R.id.grany);
+
+        email = getIntent().getStringExtra("email");
+        password = getIntent().getStringExtra("password");
+
         View.OnClickListener clickarrow = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,7 +34,11 @@ public class Reg extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i;
+                status = "famy";
                 i = new Intent(Reg.this, AnkFamy.class);
+                i.putExtra("email", email);
+                i.putExtra("password", password);
+                i.putExtra("status", status);
                 startActivity(i);
             }
         };
@@ -37,7 +46,11 @@ public class Reg extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i;
+                status = "grany";
                 i = new Intent(Reg.this, AnkGrany.class);
+                i.putExtra("email", email);
+                i.putExtra("password", password);
+                i.putExtra("status", status);
                 startActivity(i);
             }
         };

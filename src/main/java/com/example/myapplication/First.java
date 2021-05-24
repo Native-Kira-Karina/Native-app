@@ -20,6 +20,8 @@ public class First extends AppCompatActivity {
     private EditText edit_log, edit_pas;
     private FirebaseAuth mAuth;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,11 +44,11 @@ public class First extends AppCompatActivity {
         super.onStart();
         FirebaseUser cUser = mAuth.getCurrentUser();
         if (cUser != null) {
-            Toast.makeText(this, "Пользователь зарегестрирован", Toast.LENGTH_SHORT).show();
             cUser.reload();
         }
 
     }
+
 
     public void onClickReg() {
         Log.d("first onClickReg", "-> " + edit_log.getText() + " _ " + edit_pas.getText());
@@ -56,8 +58,15 @@ public class First extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Toast.makeText(First.this, "Пользователь успешно зарегестрирован", Toast.LENGTH_SHORT).show();
+
+                        String email = edit_log.getText().toString();
+                        String password = edit_pas.getText().toString();
+
+
                         Intent i;
                         i = new Intent(First.this, Reg.class);
+                        i.putExtra("email", email);
+                        i.putExtra("password", password);
                         startActivity(i);
                     } else {
                         Toast.makeText(First.this, "Something went wrong", Toast.LENGTH_SHORT).show();
@@ -78,6 +87,9 @@ public class First extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Toast.makeText(First.this, "Пользователь успешно вошёл", Toast.LENGTH_SHORT).show();
+                        Intent i;
+                        i = new Intent(First.this, Main.class);
+                        startActivity(i);
                     } else {
                         Toast.makeText(First.this, "Something went wrong", Toast.LENGTH_SHORT).show();
                     }
