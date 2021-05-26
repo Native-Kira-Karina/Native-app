@@ -20,6 +20,7 @@ import com.google.android.material.snackbar.Snackbar;
 public class Main extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,8 @@ public class Main extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        id = getIntent().getStringExtra("id");
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -61,4 +64,8 @@ public class Main extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+    public String getId(){
+        return id;
+    }
+
 }

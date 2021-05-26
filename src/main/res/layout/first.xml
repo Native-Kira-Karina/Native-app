@@ -67,15 +67,15 @@
 
     <TextView
         android:id="@+id/repeat"
-        android:layout_width="276dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="316dp"
-        android:text="@string/create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="324dp"
+        android:text="@string/password"
         android:textColor="@color/text"
         android:textSize="22sp"
         app:layout_constraintBaseline_toBaselineOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintHorizontal_bias="0.183"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

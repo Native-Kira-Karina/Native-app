@@ -19,6 +19,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class First extends AppCompatActivity {
     private EditText edit_log, edit_pas;
     private FirebaseAuth mAuth;
+    private String uid = "";
 
 
 
@@ -46,6 +47,7 @@ public class First extends AppCompatActivity {
         if (cUser != null) {
             cUser.reload();
         }
+        uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
     }
 
@@ -67,6 +69,7 @@ public class First extends AppCompatActivity {
                         i = new Intent(First.this, Reg.class);
                         i.putExtra("email", email);
                         i.putExtra("password", password);
+                        i.putExtra("id", uid);
                         startActivity(i);
                     } else {
                         Toast.makeText(First.this, "Something went wrong", Toast.LENGTH_SHORT).show();
@@ -89,6 +92,7 @@ public class First extends AppCompatActivity {
                         Toast.makeText(First.this, "Пользователь успешно вошёл", Toast.LENGTH_SHORT).show();
                         Intent i;
                         i = new Intent(First.this, Main.class);
+                        i.putExtra("id", uid);
                         startActivity(i);
                     } else {
                         Toast.makeText(First.this, "Something went wrong", Toast.LENGTH_SHORT).show();

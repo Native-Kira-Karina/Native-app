@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Reg extends AppCompatActivity {
     ImageButton arrow, famy, grany;
-    String email, password, status;
+    String email, password, status, id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class Reg extends AppCompatActivity {
         grany = (ImageButton) findViewById(R.id.grany);
 
         email = getIntent().getStringExtra("email");
+        id = getIntent().getStringExtra("id");
         password = getIntent().getStringExtra("password");
 
         View.OnClickListener clickarrow = new View.OnClickListener() {
@@ -37,7 +38,8 @@ public class Reg extends AppCompatActivity {
                 status = "famy";
                 i = new Intent(Reg.this, AnkFamy.class);
                 i.putExtra("email", email);
-                i.putExtra("password", password);
+                i.putExtra("email", email);
+                i.putExtra("id", id);
                 i.putExtra("status", status);
                 startActivity(i);
             }
@@ -49,6 +51,7 @@ public class Reg extends AppCompatActivity {
                 status = "grany";
                 i = new Intent(Reg.this, AnkGrany.class);
                 i.putExtra("email", email);
+                i.putExtra("id", id);
                 i.putExtra("password", password);
                 i.putExtra("status", status);
                 startActivity(i);

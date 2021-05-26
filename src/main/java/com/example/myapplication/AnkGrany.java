@@ -49,6 +49,7 @@ public class AnkGrany extends AppCompatActivity {
         email = getIntent().getExtras().getString("email");
         password = getIntent().getExtras().getString("password");
         status = getIntent().getExtras().getString("status");
+        id = getIntent().getExtras().getString("id");
 
         ed_name = findViewById(R.id.ed_name);
         ed_age = findViewById(R.id.ed_age);
@@ -97,6 +98,7 @@ public class AnkGrany extends AppCompatActivity {
                     i.putExtra("help", help);
                     i.putExtra("problem", problem);
                     i.putExtra("cod_photo", cod);
+                    i.putExtra("id", id);
                     startActivity(i);
                 }else{
                     Toast.makeText(getApplicationContext(), "Заполните пустые поля", Toast.LENGTH_SHORT).show();
@@ -140,8 +142,7 @@ public class AnkGrany extends AppCompatActivity {
                     })
                     .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
                         @Override
-                        public void onProgress(UploadTask.TaskSnapshot taskSna
-                                               pshot) {
+                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
                             double progress = (100.0*taskSnapshot.getBytesTransferred()/taskSnapshot
                                     .getTotalByteCount());
                             progressDialog.setMessage("Uploaded "+(int)progress+"%");

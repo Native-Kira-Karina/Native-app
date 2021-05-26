@@ -37,9 +37,9 @@ public class CheckNumber extends AppCompatActivity {
         help = getIntent().getExtras().getString("help");
         problem = getIntent().getExtras().getString("problem");
         code = getIntent().getExtras().getString("cod");
+        id = getIntent().getExtras().getString("id");
 
         mDataBase = FirebaseDatabase.getInstance("https://native-kira-default-rtdb.europe-west1.firebasedatabase.app/").getReference(UsKey);
-        id = mDataBase.getKey();
 
         arrow = (ImageButton) findViewById(R.id.arrow);
         View.OnClickListener clickarrow = new View.OnClickListener() {
@@ -62,6 +62,7 @@ public class CheckNumber extends AppCompatActivity {
                     mDataBase.push().setValue(newUser);
                     Intent i;
                     i = new Intent(CheckNumber.this, Main.class);
+                    i.putExtra("id", id);
                     startActivity(i);
                 } else {
                     Toast.makeText(getApplicationContext(), "Введите номер телефона", Toast.LENGTH_SHORT).show();

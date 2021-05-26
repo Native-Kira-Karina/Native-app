@@ -1,35 +1,90 @@
 package com.example.myapplication.ui.home;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
+import androidx.fragment.app.ListFragment;
 
-import com.example.myapplication.R;
+import com.example.myapplication.ListAdapter;
+import com.example.myapplication.Main;
+import com.example.myapplication.Model;
+import com.example.myapplication.User;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
-public class HomeFragment extends Fragment {
+import java.util.ArrayList;
+import java.util.List;
 
-    private HomeViewModel homeViewModel;
+public class HomeFragment extends ListFragment {
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+
+    private DatabaseReference mDataBase;
+    private String UsKey = "User";
+    private List<String> ListData;
+    String st = "";
+
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        ListData = new ArrayList<>();
+        mDataBase = FirebaseDatabase.getInstance("https://native-kira-default-rtdb.europe-west1.firebasedatabase.app/").getReference().child(UsKey);
+
+        String status = "famy";
+
+        Main activity = (Main) getActivity();
+        String uid = activity.getId();
+
+        Toast.makeText(getContext(), mDataBase.child(uid).toString(), Toast.LENGTH_SHORT).show();
+        mDataBase.child(uid).addValueEventListener(new ValueEventListener() {
             @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String status = dataSnapshot.child("status").getValue(String.class);
+                st = status;
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
             }
         });
-        return root;
+
+
+        ValueEventListener vListener = new ValueEventListener() {
+            List<Model> list = new ArrayList<>();
+
+            String s = "famy";
+            String gr = "grany";
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (list.size() > 0) list.clear();
+                if(st.equals(s)){
+                    for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                        User user = ds.getValue(User.class);
+                        assert user != null;
+                        if(user.status.equals(gr)) {
+                            list.add(new Model(user.nam, user.age, user.inf, user.help));
+                        }
+
+                    }
+                }
+
+                ListAdapter adapter = new ListAdapter(getContext(), list);
+                setListAdapter(adapter);
+
+            }
+
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        };
+        mDataBase.addValueEventListener(vListener);
     }
 }
+
+
+

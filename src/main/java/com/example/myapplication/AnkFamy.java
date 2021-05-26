@@ -49,6 +49,7 @@ public class AnkFamy extends AppCompatActivity {
         email = getIntent().getExtras().getString("email");
         password = getIntent().getExtras().getString("password");
         status = getIntent().getExtras().getString("status");
+        id = getIntent().getExtras().getString("id");
 
         ed_name = findViewById(R.id.ed_name);
         ed_age = findViewById(R.id.ed_age);
@@ -89,6 +90,7 @@ public class AnkFamy extends AppCompatActivity {
                     Intent i;
                     i = new Intent(AnkFamy.this, CheckNumber.class);
                     i.putExtra("email", email);
+                    i.putExtra("id", id);
                     i.putExtra("password", password);
                     i.putExtra("status", status);
                     i.putExtra("nam", nam);
